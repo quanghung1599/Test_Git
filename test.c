@@ -5,12 +5,22 @@ int sum(int a, int b, int c)
     return a+b+c;
 }
 
+typedef enum{
+    a = 1,
+    b,
+    c,
+    d,
+    e,
+} numbercheck_t;
+
 int main()
 {
-    printf("RenesasVietNam\n");
-    int a = sum(2,3,4);
-    printf("Tong: %d\n", a);
+    numbercheck_t number;
+    number = sum(1,0,0);
+    if(1 == number)
+        printf("RenesasVietNam\n");
+    // int a = sum(2,3,4);
+    // printf("Tong: %d\n", a);
+    printf("Number: %d\n", number);
     
 }
-// hunghunghung
-char buff[5] = {2,3,4,5,6};
