@@ -12,6 +12,10 @@ typedef enum{
     d,
     e,
 } numbercheck_t;
+typedef struct
+{
+    int a;
+}hung_t;
 
 int main()
 {
