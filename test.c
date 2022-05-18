@@ -1,5 +1,23 @@
 #include "stdio.h"
 #include "stdint.h"
+#include "string.h"
+
+
+typedef struct 
+{
+    /* data */
+    uint32_t w;
+    uint32_t z;
+    uint32_t t;
+    uint32_t a;
+    // uint32_t w;
+
+    uint64_t b[8];
+    uint64_t c[8];
+    uint64_t d[8];
+    uint64_t e[4];
+}hung;
+
 
 uint32_t caculate(uint32_t flow_width, uint32_t flow_height,uint32_t tile_width, uint32_t tile_height, uint32_t tile_shift)
 {
@@ -46,6 +64,15 @@ uint32_t caculate(uint32_t flow_width, uint32_t flow_height,uint32_t tile_width,
 
 int main()
 {
-    printf("%d",caculate(16,10,6,4,4));
+    hung rvc;
+    // sizeof(char)
+    // printf("%d\n",caculate(16,10,6,4,4));
+    // uint32_t kkk = caculate(3,4,2);
+    printf("%d",sizeof(hung));
+    printf("Address a: %u\n",&rvc.a);
+    printf("Address b: %u\n",&rvc.b);
+    printf("Address c: %u\n",&rvc.c);
+    printf("Address d: %u\n",&rvc.d);
+    printf("Address e: %u\n",&rvc.e);
     return 0;
 }
