@@ -6,7 +6,7 @@
 typedef struct 
 {
     /* data */
-    uint32_t w;
+    uint32_t w :3;
     uint32_t z;
     uint32_t t;
     uint32_t a;
@@ -68,11 +68,13 @@ int main()
     // sizeof(char)
     // printf("%d\n",caculate(16,10,6,4,4));
     // uint32_t kkk = caculate(3,4,2);
-    printf("%d",sizeof(hung));
-    printf("Address a: %u\n",&rvc.a);
-    printf("Address b: %u\n",&rvc.b);
-    printf("Address c: %u\n",&rvc.c);
-    printf("Address d: %u\n",&rvc.d);
-    printf("Address e: %u\n",&rvc.e);
+    // printf("%d",sizeof(hung));
+    rvc.w = 10;
+    printf("%d\n",rvc.w);
+    // printf("Address a: %u\n",&rvc.a);
+    // printf("Address b: %u\n",&rvc.b);
+    // printf("Address c: %u\n",&rvc.c);
+    // printf("Address d: %u\n",&rvc.d);
+    // printf("Address e: %u\n",NULL);
     return 0;
 }
